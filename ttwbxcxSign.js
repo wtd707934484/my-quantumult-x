@@ -1,63 +1,22 @@
 /*
-
  @𝐗𝐢𝐝𝐍 𝐃𝐃    感谢红鲤鱼大佬
 //++++++++++++++++++++++++++++++++-
-
-挖矿有现金还有元宝百分百中奖！#C1ZDWn0971w#复制此消息，打开支付宝搜索，体验机蜜天天挖矿-每日领现金抽大奖小程序
-
 说明:
-
 天天挖矿小程序 签到可以获得现金秒到账 支付宝里搜索
-
 圈x获取不到ck就把body改成header
-
-打开软件签到获取ck 签过到可能获取不到ck 
-签到ck签到奖励ck共2个ck少一个没获取到就无法签到
-
-
-
-
-
-
+打开软件签到获取ck 签过到可能获取不到ck
 surge:本地
 天天挖矿小程序 = type=http-request,pattern=^https:\/\/operation-api\.jimistore\.com\/*,requires-body=1,max-size=0,script-path=ttwbxcxSign.js
-
 定时 天天挖矿小程序 = type=cron,cronexp=0 10 0 * * *,script-path=ttwbxcxSign.js
-
-
-
 圈x:本地
 签到获取ck
 ^https:\/\/operation-api\.jimistore\.com\/* url script-request-body ttwbxcxSign.js
-
-
-
-
-
 定时 0 10 0 * * * ttwbxcxSign.js, tag=天天挖矿小程序, enabled=true
-
-
-
-
-
 loon:本地
 签到获取ck
 http-request ^https:\/\/operation-api\.jimistore\.com\/* script-path=ttwbxcxSign.js, requires-body=true, timeout=10, tag=天天挖矿小程序
-
-
-
-
 定时 cron "0 10 0 * * *" script-path=ttwbxcxSign.js
-
-
-
-
 MITM= operation-api.jimistore.com
-
-
-
-
-
 */
 
 
@@ -123,24 +82,19 @@ function XidN_Sign()
 var createSignurl=$XidN.read("createSignurlname");
 var createSignhd=$XidN.read("createSignhdname");
 var createSignbd=$XidN.read("createSignbdname");
-  const llUrl1={
+  const createSign={
       url:createSignurl,
       headers:JSON.parse(createSignhd),
       body:createSignbd,
       timeout:60000};
-  $XidN.post(llUrl1,function(error, response, data) {
+  $XidN.post(createSign,function(error, response, data) {
 if (logs==1)console.log(data)
 var obj=JSON.parse(data);
 if(obj.data.success== "true")
-
-result2="【签到成功✅】"+"奖励"+(parseInt(obj.data.amount)/100).toFixed(2)+"💸现金";
-
+result2="【签到成功✅】"+"奖励💸现金";
 else
 if(obj.data.success== "false")
 result2="【签到失败⚠️】重复签到";
-else
-if(obj.code== "40101")
-result2="【签到失败⚠️】"+obj.message;
 else
 result2="签到失败获取cookie";
 
@@ -155,8 +109,8 @@ var createSignhd=$XidN.read("createSignhdname");
 if (logs==1)console.log(data)
 var obj=JSON.parse(data);
 if(obj.code== "200")
+result2+="【当前账户信息】"+",连续签"+obj.data.cumulativeSignCount+"天,"+obj.data.currentWing+"元宝";
 
-result2+="【当前账户信息】"+(Number(obj.data.cumulativeMoney)/100).toFixed(2)+"💸现金"+",连续签"+obj.data.cumulativeSignCount+"天,"+obj.data.currentWing+"元宝";
 
 
 result2=""+result1+""+result2+"\n";
@@ -201,6 +155,10 @@ if (so==true)
 
 
 
+
+
+
+
 }  
 }
 
@@ -226,7 +184,6 @@ if ($XidN.isRequest) {
   main();
   $XidN.end()
  }
-
 
 
 
