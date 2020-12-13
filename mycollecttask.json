@@ -49,7 +49,7 @@
 "15 0 * * * https://gitee.com/passerby-b/javascript/raw/master/unipay.js, tag=云闪付, img-url=https://raw.githubusercontent.com/Orz-3/task/master/unipay.png",
 
 "0 0 0 * * * https://raw.githubusercontent.com/XidNDD/2020scripts/master/jddsSign.js, tag=京东读书签到, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jdds.png",        
-"0 0 0 * * * https://github.com/wtd707934484/my-quantumult-x/raw/main/ttwbxcxSign.js, tag=天天挖矿小程序, img-url=https://raw.githubusercontent.com/Orz-3/task/master/ttwkxcx.png",
+"0 0 0 * * * https://raw.githubusercontent.com/wtd707934484/my-quantumult-x/main/ttwbxcxSign.js, tag=天天挖矿小程序, img-url=https://raw.githubusercontent.com/Orz-3/task/master/ttwkxcx.png",
 
 "0 */20 0-23 * * * https://raw.githubusercontent.com/ziye12/JavaScript/master/qqread.js, tag=企鹅读书",
 
