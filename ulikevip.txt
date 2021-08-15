@@ -2,4 +2,4 @@
 
 hostname = commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi
 
-^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info url script-response-body ulike.js
+^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info url script-response-body https://raw.githubusercontent.com/songyangzz/QuantumultX/master/ulike/ulike.js
