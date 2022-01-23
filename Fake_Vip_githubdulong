@@ -1,0 +1,12 @@
+hostname = notability.com, bmall.camera360.com, spclient.wg.spotify.com, ap*.intsig.net
+
+#notability
+^https?:\/\/notability\.com\/subscriptions url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/notability.js
+
+#Mix (1.MIX解锁订阅功能 2.配置好脚本、点击三天试用、恢复购买、取消订阅。)
+^https:\/\/bmall\.camera360\.com\/api\/mix\/recovery$ url script-response-body https://raw.githubusercontent.com/githubdulong/Script/master/mix.js
+
+#扫描全能王(CamScanner 解锁部分高级特权)
+^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/githubdulong/Script/master/CamScanner.js
+
+
