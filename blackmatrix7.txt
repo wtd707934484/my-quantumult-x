@@ -1,4 +1,10 @@
 
-
+#[rewrite_remote]
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.qxrewrite, tag=知乎助手_去广告及体验增强, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.qxrewrite, tag=开屏去广告, enabled=true
 
+#gallery
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/gallery.json
+
+#boxjs
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/boxjs.json
