@@ -1,4 +1,4 @@
-hostname = notability.com, bmall.camera360.com, spclient.wg.spotify.com, ap*.intsig.net
+hostname = notability.com, bmall.camera360.com, ap*.intsig.net,  spclient.wg.spotify.com
 
 #notability
 ^https?:\/\/notability\.com\/subscriptions url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/notability.js
@@ -9,4 +9,6 @@ hostname = notability.com, bmall.camera360.com, spclient.wg.spotify.com, ap*.int
 #扫描全能王(CamScanner 解锁部分高级特权)
 ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/githubdulong/Script/master/CamScanner.js
 
+#spotify(#  部分解锁premium 需iOS15 ,建议重新登录,音质不能设置为超高 # 1. 搜索界面 歌单/歌曲可以随意切换完全播放  2. 音乐库已点赞歌曲随意切换完全播放)
+^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js
 
