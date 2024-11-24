@@ -1,0 +1,11 @@
+hostname = m.client.10010.com, client.app.coc.100863.cn, e.dlife.cn, %APPEND% api.wsgw-rewrite.com
+
+#中国联通 获取方式：打开  中国联通 app 【官方版】-> 首页的流量查询获取 Cookie
+https:\/\/m\.client\.10010\.com\/(.*)\/smartwisdomCommon  url script-request-header https://raw.githubusercontent.com/dompling/Script/master/10010/index.js
+
+
+
+#中国电信 获取方式：打开  https://e.dlife.cn/index.do 登录
+^https:\/\/e\.dlife\.cn\/user\/loginMiddle  url script-request-header https://raw.githubusercontent.com/dompling/Script/master/10000/index.js
+
+https://raw.githubusercontent.com/dompling/Script/master/wsgw/index.js
